@@ -1,0 +1,33 @@
+# @package agent
+_target_: agent.pbrl.PBRLAgent
+name: pbrl
+obs_shape: ???        # to be specified later
+action_shape: ???     # to be specified later
+device: ${device}
+#alpha: 2.5
+lr: 1e-4
+critic_target_tau: 0.005
+actor_target_tau: 0.005
+policy_freq: 2
+use_tb: True
+hidden_dim: 1024
+#stddev_schedule: 0.2
+#stddev_clip: 0.3
+policy_noise: 0.2
+noise_clip: 0.5
+#nstep: 1
+batch_size: 1024
+#has_next_action: False
+num_expl_steps: ???   # to be specified later
+
+# PBRL
+num_random: 3
+ucb_ratio_in: 0.001
+ensemble: 5
+ood_noise: 0.01              # action noise for sampling
+
+ucb_ratio_ood_init: 3.0      # 3.0
+ucb_ratio_ood_min: 0.1       # 0.1
+ood_decay_factor: 0.99995    # 0.99995   ucb ratio decay factor.
+
+share_ratio: 1.5             # penalty ratio for shared dataset

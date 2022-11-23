@@ -1,0 +1,48 @@
+{
+  "walker":
+  {
+      "stand": {"expert": 986.8, "medium": 458.85},
+      "walk": {"expert": 980.0, "medium": 681.4},
+      "run": {"expert": 842.6, "medium": 411.0},
+      "filp": {"expert": 839.5, "medium": 583.5}
+  },
+  "hopper":
+  {
+      "stand": 1000,
+      "hop": 1000,
+      "hop_backward": 1000,
+      "flip": 1000,
+      "flip_backward": 1000
+  },
+  "cheetah":
+  {
+      "run": 1000,
+      "run_backward": 1000,
+      "flip": 1000
+  },
+  "quadruped":
+  {
+      "jump": 1000,
+      "run": 1000,
+      "roll": 1000,
+      "roll_fast": 1000,
+      "stand": 1000,
+      "walk": 1000,
+      "escape": 1000,
+      "fetch": 1000
+  },
+  "jaco":
+  {
+      "reach_top_left": 1000,
+      "reach_top_right": 1000,
+      "reach_bottom_left": 1000,
+      "reach_bottom_right": 1000
+  },
+  "point_mass_maze":
+  {
+      "reach_top_left": 1000,
+      "reach_top_right": 1000,
+      "reach_bottom_left": 1000,
+      "reach_bottom_right": 1000
+  }
+}

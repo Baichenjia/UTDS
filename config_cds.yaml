@@ -1,0 +1,36 @@
+defaults:
+  - agent: cql_cds                               # cql_cds, cql_cdsz
+  - override hydra/launcher: submitit_local
+
+# unsupervised exploration
+# expl_agent: td3
+# task settings
+task: walker_walk                               # main task to train (relable other datasets to this task)
+share_task: [walker_walk, walker_run]           # task for data sharing
+data_type: [medium, medium-replay]              # dataset for data sharing (corresponding each share_task)
+
+discount: 0.99
+# train settings
+num_grad_steps: 1000000
+log_every_steps: 1000
+# eval
+eval_every_steps: 10000
+num_eval_episodes: 10
+# dataset
+replay_buffer_dir: ../../collect    # make sure to update this if you change hydra run dir
+replay_buffer_size: 10000000        # max: 10M
+replay_buffer_num_workers: 4
+batch_size: ${agent.batch_size}
+# misc
+seed: 1
+device: cuda
+save_video: False
+use_tb: False
+
+# used for train_offline_single
+data_main: expert
+
+wandb: False
+hydra:
+  run:
+    dir: ./result_cds/${task}-Share_${share_task[0]}_${share_task[1]}-${data_type[0]}-${agent.name}-${now:%m-%d-%H-%M-%S}
