@@ -4,8 +4,8 @@ This is a PyTorch implementation of our paper titled "Pessimistic Value Iteratio
 
 ## Datasets
 
-We collect a Multi-Task Offline [Dataset](http://129.105.36.50/dataset/) based on DeepMind Control Suite (DMC).
-- Download the [Dataset](http://129.105.36.50/dataset/) to `./collect` before you start training. 
+We collect a Multi-Task Offline [Dataset](http://alchemist.wang-research.northwestern.edu/dataset/) based on DeepMind Control Suite (DMC).
+- Download the [Dataset](http://alchemist.wang-research.northwestern.edu/dataset/) to `./collect` before you start training. 
 - The users can collect new datasets based on `collect_daeta.py`. The supported tasks
 include standard tasks from DMC and custom tasks from  `./custom_dmc_tasks/`
 
