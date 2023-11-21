@@ -1,6 +1,6 @@
 # Pessimistic Value Iteration for Multi-Task Data Sharing 
 
-This is a PyTorch implementation of our paper titled "Pessimistic Value Iteration for Multi-Task Data Sharing in Offline Reinforcement Learning"
+This repo contains a PyTorch implementation and the datasets for our paper titled "Pessimistic Value Iteration for Multi-Task Data Sharing in Offline Reinforcement Learning" published at *Artificial Intelligence* Journal. This is the paper [Link](https://www.sciencedirect.com/science/article/pii/S0004370223001947). 
 
 ## Datasets
 
@@ -90,6 +90,20 @@ python train_offline_share.py task=quadruped_jump "+share_task=[quadruped_jump, 
 ```
 
 We support wandb by setting `wandb: True` in `config*.yaml` file.
+
+## Citation
+```
+@article{UTDS2023,
+title = {Pessimistic Value Iteration for Multi-Task Data Sharing in Offline Reinforcement Learning},
+journal = {Artificial Intelligence},
+author = {Chenjia Bai and Lingxiao Wang and Jianye Hao and Zhuoran Yang and Bin Zhao and Zhen Wang and Xuelong Li},
+pages = {104048},
+year = {2023},
+issn = {0004-3702},
+doi = {https://doi.org/10.1016/j.artint.2023.104048},
+url = {https://www.sciencedirect.com/science/article/pii/S0004370223001947},
+}
+```
 
 ## License
 MIT license
